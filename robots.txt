@@ -1,0 +1,11 @@
+# TechVision Robots Configuration
+User-agent: *
+Allow: /
+Disallow: /admin/
+Disallow: /private/
+
+# Sitemap location
+Sitemap: https://techvision.com/sitemap.xml
+
+# Crawl delay to prevent server overload
+Crawl-delay: 1

@@ -2,22 +2,124 @@
 <html lang="en">
 
 <head>
+  <!-- Essential Meta Tags -->
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>TechVision - IT Solutions for Your Business</title>
+  <meta name="description"
+    content="TechVision - Professional IT solutions for modern businesses. Web development, custom software, and digital transformation services. 500+ happy clients, 1000+ projects completed.">
+  <meta name="keywords"
+    content="IT solutions, web development, custom software, digital transformation, tech company, software development, IT services">
+  <meta name="author" content="TechVision">
+  <meta name="language" content="English">
+  <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
+
+  <!-- Open Graph Tags (Social Media) -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="TechVision - IT Solutions">
+  <meta property="og:description"
+    content="Innovative IT solutions tailored for modern businesses. Web development, custom software, and digital transformation.">
+  <meta property="og:url" content="https://techvisionit.netlify.app/">
+  <meta property="og:image" content="https://techvisionit.netlify.app/assets/images/og-image.png">
+  <meta property="og:site_name" content="TechVision">
+  <meta property="og:locale" content="en_US">
+
+  <!-- Twitter Card Tags -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="TechVision - IT Solutions">
+  <meta name="twitter:description"
+    content="Professional IT solutions for modern businesses. Explore our web development and digital transformation services.">
+  <meta name="twitter:image" content="https://techvisionit.netlify.app/assets/images/og-image.png">
+
+  <!-- Canonical URL -->
+  <meta name="canonical" href="https://techvisionit.netlify.app/">
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/x-icon" href="assets/images/favicon.ico">
+  <link rel="apple-touch-icon" href="assets/images/apple-touch-icon.png">
+
+  <!-- Preconnect to external resources -->
+  <link rel="preconnect" href="https://cdn.jsdelivr.net">
+  <link rel="preconnect" href="https://cdnjs.cloudflare.com">
+  <link rel="dns-prefetch" href="https://cdn.jsdelivr.net">
+
+  <!-- Stylesheets -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
     integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
     crossorigin="anonymous" referrerpolicy="no-referrer" />
   <link rel="stylesheet" href="assets/style.css">
+
+  <!-- Schema Markup (Structured Data) -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "LocalBusiness",
+    "name": "TechVision",
+    "alternateName": "TechVision IT Solutions",
+    "url": "https://techvisionit.netlify.app/",
+    "logo": "https://techvisionit.netlify.app/assets/images/logo.png",
+    "description": "Professional IT solutions and digital transformation services for modern businesses",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "123 Tech Street",
+      "addressLocality": "Silicon Valley",
+      "addressRegion": "California",
+      "postalCode": "94025",
+      "addressCountry": "US"
+    },
+    "telephone": "+1-555-123-4567",
+    "email": "hello@techvision.com",
+    "foundingDate": "2015",
+    "numberOfEmployees": {
+      "@type": "QuantitativeValue",
+      "value": 150
+    },
+    "areaServed": {
+      "@type": "Country",
+      "name": "United States"
+    },
+    "contactPoint": {
+      "@type": "ContactPoint",
+      "telephone": "+1-555-123-4567",
+      "contactType": "Customer Service",
+      "email": "hello@techvision.com"
+    },
+    "sameAs": [
+      "https://www.facebook.com/techvision",
+      "https://www.twitter.com/techvision",
+      "https://www.linkedin.com/company/techvision",
+      "https://www.instagram.com/techvision"
+    ]
+  }
+  </script>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "TechVision",
+    "url": "https://techvisionit.netlify.app/",
+    "logo": "https://techvisionit.netlify.app/assets/images/logo.png",
+    "description": "IT Solutions for Modern Businesses",
+    "potentialAction": {
+      "@type": "CommunicateAction",
+      "target": {
+        "@type": "EntryPoint",
+        "urlTemplate": "https://techvisionit.netlify.app/#contact"
+      }
+    }
+  }
+  </script>
+
+  <title>TechVision - IT Solutions</title>
 </head>
 
 <body>
   <!-- Navigation Bar -->
-  <nav class="navbar">
+  <nav class="navbar" role="navigation" aria-label="Main navigation">
     <div class="container nav-container">
-      <div class="logo">TechVision</div>
-      <button class="hamburger" id="hamburger">
+      <a href="/" class="logo" title="TechVision - Home">TechVision</a>
+      <button class="hamburger" id="hamburger" aria-label="Toggle navigation menu" aria-expanded="false">
         <span></span>
         <span></span>
         <span></span>
@@ -28,152 +130,154 @@
         <li><a href="#about" class="nav-link">About</a></li>
         <li><a href="#contact" class="nav-link">Contact</a></li>
       </ul>
-      <button class="theme-toggle" id="themeToggle" title="Toggle Dark Mode">🌙</button>
+      <button class="theme-toggle" id="themeToggle" title="Toggle Dark Mode" aria-label="Toggle dark mode">🌙</button>
     </div>
   </nav>
 
+  <main>
+    <!-- Hero Section -->
+    <section id="home" class="hero py-5" role="banner">
+      <div class="container">
+        <div class="row align-items-center">
+          <!-- Text Column -->
+          <div class="col-lg-6 col-md-12 hero-text">
+            <h1 class="hero-title">Welcome to TechVision</h1>
+            <p class="hero-subtitle">Innovative IT Solutions for Modern Businesses</p>
+            <p class="hero-description">
+              Empower your business with innovative technology and expert-driven solutions.
+              We specialize in creating scalable, user-friendly, and high-performance digital experiences
+              that help you stay ahead in a competitive market. Whether it's web development,
+              custom software, or digital transformation, we turn your ideas into powerful solutions.
+            </p>
+            <a href="#contact" class="btn btn-primary">Get Started</a>
+          </div>
 
-  <!-- Hero Section -->
-  <section id="home" class="hero py-5">
-    <div class="container">
-      <div class="row align-items-center">
-        <!-- Text Column -->
-        <div class="col-lg-6 col-md-12 hero-text">
-          <h1 class="hero-title">Welcome to TechVision</h1>
-          <p class="hero-subtitle">Innovative IT Solutions for Modern Businesses</p>
-          <p class="hero-description">
-            Empower your business with innovative technology and expert-driven solutions.
-            We specialize in creating scalable, user-friendly, and high-performance digital experiences
-            that help you stay ahead in a competitive market. Whether it's web development,
-            custom software, or digital transformation, we turn your ideas into powerful solutions.
-          </p>
-          <a href="#contact" class="btn btn-primary">Get Started</a>
-        </div>
-
-        <!-- Image Column -->
-        <div class="col-lg-6 col-md-12 hero-placeholder text-center">
-          <img class="img-fluid hero-image" src="assets/images/hero.png" alt="Hero Image">
-        </div>
-
-      </div>
-    </div>
-  </section>
-
-
-  <!-- Services Section -->
-  <section id="services" class="services py-5">
-    <div class="container text-center">
-      <h2 class="section-title">Our Services</h2>
-      <p class="section-subtitle">Comprehensive IT solutions tailored to your needs</p>
-
-      <div id="servicesGrid" class="row g-4">
-        <!-- Service cards will be injected here by JS -->
-      </div>
-    </div>
-  </section>
-
-
-  <!-- About Section -->
-  <section id="about" class="about py-5">
-    <div class="container">
-      <div class="row align-items-center">
-
-        <!-- Image Column -->
-        <div class="col-lg-6 col-md-12 order-lg-1 order-2 mb-4 mb-lg-0 text-center about-placeholder">
-          <img class="img-fluid" src="assets/images/about.png" alt="About TechVision">
-        </div>
-
-        <!-- Content Column -->
-        <div class="col-lg-6 col-md-12 order-lg-2 order-1 about-content">
-          <h2>About TechVision</h2>
-          <p>Founded in 2015, TechVision has been at the forefront of digital transformation, helping businesses of all
-            sizes leverage technology to achieve their goals.</p>
-          <p>With a team of 150+ experienced professionals, we specialize in delivering comprehensive IT solutions that
-            drive innovation and sustainable growth. Our commitment to excellence and customer satisfaction has made us
-            a trusted partner for over 500+ companies worldwide.</p>
-
-          <!-- Stats Section -->
-          <div class="row text-center mt-4 g-4">
-            <div class="col-lg-4 col-md-6 col-12 stat">
-              <h3 class="count" data-target="500">0</h3>
-              <p>Happy Clients</p>
-            </div>
-            <div class="col-lg-4 col-md-6 col-12 stat">
-              <h3 class="count" data-target="150">0</h3>
-              <p>Team Members</p>
-            </div>
-            <div class="col-lg-4 col-md-6 col-12 stat">
-              <h3 class="count" data-target="1000">0</h3>
-              <p>Projects Completed</p>
-            </div>
+          <!-- Image Column -->
+          <div class="col-lg-6 col-md-12 hero-placeholder text-center">
+            <img class="img-fluid hero-image" src="assets/images/hero.png"
+              alt="TechVision team working on innovative IT solutions">
           </div>
         </div>
       </div>
-    </div>
-  </section>
+    </section>
 
+    <!-- Services Section -->
+    <section id="services" class="services py-5">
+      <div class="container text-center">
+        <h2 class="section-title">Our Services</h2>
+        <p class="section-subtitle">Comprehensive IT solutions tailored to your needs</p>
 
-  <!-- Contact Section -->
-  <section id="contact" class="contact">
-    <div class="container">
-      <h2 class="section-title">Get In Touch</h2>
-      <p class="section-subtitle">We'd love to hear from you. Send us a message!</p>
+        <div id="servicesGrid" class="row g-4">
+          <!-- Service cards will be injected here by JS -->
+        </div>
+      </div>
+    </section>
 
-      <div class="contact-grid">
-        <div class="contact-info mt-2">
-          <div class="info-item">
-            <div class="info-icon"><i class="fa-solid fa-location-dot"></i></div>
-            <div>
-              <h3>Address</h3>
-              <p>123 Tech Street, Silicon Valley, California</p>
-            </div>
+    <!-- About Section -->
+    <section id="about" class="about py-5">
+      <div class="container">
+        <div class="row align-items-center">
+          <!-- Image Column -->
+          <div class="col-lg-6 col-md-12 order-lg-1 order-2 mb-4 mb-lg-0 text-center about-placeholder">
+            <img class="img-fluid" src="assets/images/about.png"
+              alt="TechVision professional team members collaborating on projects">
           </div>
-          <div class="info-item">
-            <div class="info-icon"><i class="fa-solid fa-phone-volume"></i></div>
-            <div>
-              <h3>Phone</h3>
-              <p>+1 (555) 123-4567</p>
-            </div>
-          </div>
-          <div class="info-item">
-            <div class="info-icon"><i class="fa-solid fa-envelope-circle-check"></i></div>
-            <div>
-              <h3>Email</h3>
-              <p>hello@techvision.com</p>
+
+          <!-- Content Column -->
+          <div class="col-lg-6 col-md-12 order-lg-2 order-1 about-content">
+            <h2>About TechVision</h2>
+            <p>Founded in 2015, TechVision has been at the forefront of digital transformation, helping businesses of
+              all
+              sizes leverage technology to achieve their goals.</p>
+            <p>With a team of 150+ experienced professionals, we specialize in delivering comprehensive IT solutions
+              that
+              drive innovation and sustainable growth. Our commitment to excellence and customer satisfaction has made
+              us
+              a trusted partner for over 500+ companies worldwide.</p>
+
+            <!-- Stats Section -->
+            <div class="row text-center mt-4 g-4">
+              <div class="col-lg-4 col-md-6 col-12 stat">
+                <h3 class="count" data-target="500">0</h3>
+                <p>Happy Clients</p>
+              </div>
+              <div class="col-lg-4 col-md-6 col-12 stat">
+                <h3 class="count" data-target="150">0</h3>
+                <p>Team Members</p>
+              </div>
+              <div class="col-lg-4 col-md-6 col-12 stat">
+                <h3 class="count" data-target="1000">0</h3>
+                <p>Projects Completed</p>
+              </div>
             </div>
           </div>
         </div>
-
-        <form class="contact-form mt-2" id="contactForm">
-          <div class="form-group">
-            <label for="name">Name</label>
-            <input type="text" id="name" name="name" placeholder="Your Name" >
-            <span class="error-message" id="nameError"></span>
-          </div>
-
-          <div class="form-group">
-            <label for="email">Email</label>
-            <input type="email" id="email" name="email" placeholder="Your Email" >
-            <span class="error-message" id="emailError"></span>
-          </div>
-
-          <div class="form-group">
-            <label for="message">Message</label>
-            <textarea id="message" name="message" placeholder="Your Message" rows="5" ></textarea>
-            <span class="error-message" id="messageError"></span>
-          </div>
-
-          <button type="submit" class="btn btn-primary">Send Message</button>
-          <span class="success-message" id="successMessage"></span>
-        </form>
       </div>
-    </div>
-  </section>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+      <div class="container">
+        <h2 class="section-title">Get In Touch</h2>
+        <p class="section-subtitle">We'd love to hear from you. Send us a message!</p>
+
+        <div class="contact-grid">
+          <div class="contact-info mt-2">
+            <div class="info-item">
+              <div class="info-icon"><i class="fa-solid fa-location-dot" aria-hidden="true"></i></div>
+              <div>
+                <h3>Address</h3>
+                <p>123 Tech Street, Silicon Valley, California</p>
+              </div>
+            </div>
+            <div class="info-item">
+              <div class="info-icon"><i class="fa-solid fa-phone-volume" aria-hidden="true"></i></div>
+              <div>
+                <h3>Phone</h3>
+                <p><a href="tel:+15551234567">+1 (555) 123-4567</a></p>
+              </div>
+            </div>
+            <div class="info-item">
+              <div class="info-icon"><i class="fa-solid fa-envelope-circle-check" aria-hidden="true"></i></div>
+              <div>
+                <h3>Email</h3>
+                <p><a href="mailto:hello@techvision.com">hello@techvision.com</a></p>
+              </div>
+            </div>
+          </div>
+
+          <form class="contact-form mt-2" id="contactForm" name="contactForm">
+            <div class="form-group">
+              <label for="name">Name</label>
+              <input type="text" id="name" name="name" placeholder="Your Name" required>
+              <span class="error-message" id="nameError"></span>
+            </div>
+
+            <div class="form-group">
+              <label for="email">Email</label>
+              <input type="email" id="email" name="email" placeholder="Your Email" required>
+              <span class="error-message" id="emailError"></span>
+            </div>
+
+            <div class="form-group">
+              <label for="message">Message</label>
+              <textarea id="message" name="message" placeholder="Your Message" rows="5" required></textarea>
+              <span class="error-message" id="messageError"></span>
+            </div>
+
+            <button type="submit" class="btn btn-primary">Send Message</button>
+            <span class="success-message" id="successMessage"></span>
+          </form>
+        </div>
+      </div>
+    </section>
+  </main>
 
   <!-- Footer -->
-  <footer class="footer">
+  <footer class="footer" role="contentinfo">
     <div class="container">
-      <p>&copy; 2026 TechVision. All rights reserved.</p>
+      <p>&copy; 2026 TechVision. All rights reserved. | <a href="#privacy">Privacy Policy</a> | <a href="#terms">Terms
+          of Service</a></p>
     </div>
   </footer>
 
