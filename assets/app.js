@@ -1,17 +1,18 @@
-// ============================================
-// DARK MODE TOGGLE
-// ============================================
+// DARK MODE TOGGLE //
+
 const themeToggle = document.getElementById("themeToggle");
 const html = document.documentElement;
 
-// Check for saved theme preference or default to light mode
+// Check for saved theme preference or default to light mode //
+
 const currentTheme = localStorage.getItem("theme") || "light";
 if (currentTheme === "dark") {
   document.body.classList.add("dark-mode");
   themeToggle.textContent = "☀️";
 }
 
-// Theme toggle functionality
+// Theme toggle functionality //
+
 themeToggle.addEventListener("click", () => {
   document.body.classList.toggle("dark-mode");
 
@@ -24,9 +25,8 @@ themeToggle.addEventListener("click", () => {
   }
 });
 
-// ============================================
-// HAMBURGER MENU
-// ============================================
+// HAMBURGER MENU //
+
 const hamburger = document.getElementById("hamburger");
 const navMenu = document.getElementById("navMenu");
 
@@ -35,7 +35,8 @@ hamburger.addEventListener("click", () => {
   navMenu.classList.toggle("active");
 });
 
-// Close menu when a link is clicked
+// Close menu when a link is clicked //
+
 const navLinks = document.querySelectorAll(".nav-link");
 navLinks.forEach((link) => {
   link.addEventListener("click", () => {
@@ -44,7 +45,7 @@ navLinks.forEach((link) => {
   });
 });
 
-// Services Data Array - FIXED PATH
+// Services Data Array //
 const servicesData = [
   {
     image: "assets/images/services/Web.png",
@@ -84,13 +85,13 @@ const servicesData = [
   },
 ];
 
-// Target container
+// Target container //
+
 const servicesGrid = document.getElementById("servicesGrid");
 
-// Loop through servicesData and inject HTML
 servicesData.forEach((service) => {
   const col = document.createElement("div");
-  col.className = "col-md-4";
+  col.className = "col-lg-4 col-md-6";
 
   col.innerHTML = `
     <div class="service-card h-100 shadow p-4 d-flex flex-column text-center">
@@ -107,7 +108,7 @@ servicesData.forEach((service) => {
 function animateCountUp(element, duration = 2000) {
   const target = +element.getAttribute("data-target");
   let start = 0;
-  const increment = target / (duration / 16); // ~60fps
+  const increment = target / (duration / 16); 
 
   function update() {
     start += increment;
@@ -121,14 +122,15 @@ function animateCountUp(element, duration = 2000) {
   update();
 }
 
-// Trigger when stats section is visible
+// Trigger when stats section is visible //
+
 const counters = document.querySelectorAll(".count");
 const observer = new IntersectionObserver(
   (entries) => {
     entries.forEach((entry) => {
       if (entry.isIntersecting) {
         animateCountUp(entry.target);
-        observer.unobserve(entry.target); // run once
+        observer.unobserve(entry.target);
       }
     });
   },
@@ -137,9 +139,8 @@ const observer = new IntersectionObserver(
 
 counters.forEach((counter) => observer.observe(counter));
 
-// ============================================
-// SMOOTH SCROLL
-// ============================================
+// SMOOTH SCROLL //
+
 document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
   anchor.addEventListener("click", function (e) {
     e.preventDefault();
@@ -153,9 +154,8 @@ document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
   });
 });
 
-// ============================================
-// FORM VALIDATION
-// ============================================
+// FORM VALIDATION //
+
 const contactForm = document.getElementById("contactForm");
 const nameInput = document.getElementById("name");
 const emailInput = document.getElementById("email");
@@ -166,7 +166,8 @@ const emailError = document.getElementById("emailError");
 const messageError = document.getElementById("messageError");
 const successMessage = document.getElementById("successMessage");
 
-// Validation functions
+// Validation functions //
+
 function validateName() {
   const name = nameInput.value.trim();
 
@@ -180,6 +181,7 @@ function validateName() {
     return false;
   } else {
     nameError.classList.remove("show");
+    nameError.textContent = "";
     return true;
   }
 }
@@ -198,6 +200,7 @@ function validateEmail() {
     return false;
   } else {
     emailError.classList.remove("show");
+    emailError.textContent = "";
     return true;
   }
 }
@@ -215,56 +218,45 @@ function validateMessage() {
     return false;
   } else {
     messageError.classList.remove("show");
+    messageError.textContent = "";
     return true;
   }
 }
 
-// Real-time validation
+// Real-time validation on input event //
+
+nameInput.addEventListener("input", validateName);
 nameInput.addEventListener("blur", validateName);
-nameInput.addEventListener("input", () => {
-  if (nameError.classList.contains("show")) {
-    validateName();
-  }
-});
 
+emailInput.addEventListener("input", validateEmail);
 emailInput.addEventListener("blur", validateEmail);
-emailInput.addEventListener("input", () => {
-  if (emailError.classList.contains("show")) {
-    validateEmail();
-  }
-});
 
+messageInput.addEventListener("input", validateMessage);
 messageInput.addEventListener("blur", validateMessage);
-messageInput.addEventListener("input", () => {
-  if (messageError.classList.contains("show")) {
-    validateMessage();
-  }
-});
 
-// Form submission
+// Form submission //
+
 contactForm.addEventListener("submit", (e) => {
   e.preventDefault();
 
-  // Validate all fields
   const isNameValid = validateName();
   const isEmailValid = validateEmail();
   const isMessageValid = validateMessage();
 
   if (isNameValid && isEmailValid && isMessageValid) {
-    // Simulate form submission
     successMessage.textContent =
-      "✅ Message sent successfully! We will get back to you soon.";
+      "Message sent successfully! We will get back to you soon.";
     successMessage.classList.add("show");
 
-    // Reset form
     contactForm.reset();
+    nameError.classList.remove("show");
+    emailError.classList.remove("show");
+    messageError.classList.remove("show");
 
-    // Hide success message after 5 seconds
     setTimeout(() => {
       successMessage.classList.remove("show");
     }, 5000);
 
-    // Log form data (in a real app, you would send this to a server)
     console.log({
       name: nameInput.value,
       email: emailInput.value,
@@ -274,9 +266,8 @@ contactForm.addEventListener("submit", (e) => {
   }
 });
 
-// ============================================
-// SCROLL ANIMATIONS
-// ============================================
+// SCROLL ANIMATIONS //
+
 const observerOptions = {
   threshold: 0.1,
   rootMargin: "0px 0px -50px 0px",
@@ -292,6 +283,7 @@ const scrollObserver = new IntersectionObserver((entries) => {
 }, observerOptions);
 
 // Observe service cards for animation
+
 document.querySelectorAll(".service-card").forEach((card) => {
   card.style.opacity = "0";
   card.style.transform = "translateY(20px)";
@@ -299,9 +291,8 @@ document.querySelectorAll(".service-card").forEach((card) => {
   scrollObserver.observe(card);
 });
 
-// ============================================
-// NAVIGATION HIGHLIGHTING
-// ============================================
+// NAVIGATION HIGHLIGHTING //
+
 window.addEventListener("scroll", () => {
   let current = "";
 
@@ -321,9 +312,8 @@ window.addEventListener("scroll", () => {
   });
 });
 
-// ============================================
-// PAGE LOAD ANIMATION
-// ============================================
+// PAGE LOAD ANIMATION //
+
 window.addEventListener("load", () => {
   document.body.style.opacity = "1";
 });
@@ -331,7 +321,8 @@ window.addEventListener("load", () => {
 document.body.style.opacity = "0";
 document.body.style.transition = "opacity 0.3s ease";
 
-// Simulate page load
+// Simulate page load //
+
 setTimeout(() => {
   document.body.style.opacity = "1";
 }, 100);

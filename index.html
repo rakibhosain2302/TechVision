@@ -15,7 +15,7 @@
 <body>
   <!-- Navigation Bar -->
   <nav class="navbar">
-    <div class="container">
+    <div class="container nav-container">
       <div class="logo">TechVision</div>
       <button class="hamburger" id="hamburger">
         <span></span>
@@ -32,11 +32,13 @@
     </div>
   </nav>
 
+
   <!-- Hero Section -->
-  <section id="home" class="hero">
+  <section id="home" class="hero py-5">
     <div class="container">
-      <div class="hero-content d-grid">
-        <div class="hero-text">
+      <div class="row align-items-center">
+        <!-- Text Column -->
+        <div class="col-lg-6 col-md-12 hero-text">
           <h1 class="hero-title">Welcome to TechVision</h1>
           <p class="hero-subtitle">Innovative IT Solutions for Modern Businesses</p>
           <p class="hero-description">
@@ -44,16 +46,19 @@
             We specialize in creating scalable, user-friendly, and high-performance digital experiences
             that help you stay ahead in a competitive market. Whether it's web development,
             custom software, or digital transformation, we turn your ideas into powerful solutions.
-          </p> <a href="#contact" class="btn btn-primary">Get Started</a>
+          </p>
+          <a href="#contact" class="btn btn-primary">Get Started</a>
         </div>
-        <div class="hero-image">
-          <div class="hero-placeholder">
-            <img class="hero-image" src="assets/images/hero.png" alt="">
-          </div>
+
+        <!-- Image Column -->
+        <div class="col-lg-6 col-md-12 hero-placeholder text-center">
+          <img class="img-fluid hero-image" src="assets/images/hero.png" alt="Hero Image">
         </div>
+
       </div>
     </div>
   </section>
+
 
   <!-- Services Section -->
   <section id="services" class="services py-5">
@@ -69,31 +74,35 @@
 
 
   <!-- About Section -->
-  <section id="about" class="about">
+  <section id="about" class="about py-5">
     <div class="container">
-      <div class="about-grid">
-        <div class="about-image">
-          <div class="about-placeholder">
-            <img class="about-image" src="assets/images/about.png" alt="">
-          </div>
+      <div class="row align-items-center">
+
+        <!-- Image Column -->
+        <div class="col-lg-6 col-md-12 order-lg-1 order-2 mb-4 mb-lg-0 text-center about-placeholder">
+          <img class="img-fluid" src="assets/images/about.png" alt="About TechVision">
         </div>
-        <div class="about-content">
+
+        <!-- Content Column -->
+        <div class="col-lg-6 col-md-12 order-lg-2 order-1 about-content">
           <h2>About TechVision</h2>
           <p>Founded in 2015, TechVision has been at the forefront of digital transformation, helping businesses of all
             sizes leverage technology to achieve their goals.</p>
           <p>With a team of 150+ experienced professionals, we specialize in delivering comprehensive IT solutions that
             drive innovation and sustainable growth. Our commitment to excellence and customer satisfaction has made us
             a trusted partner for over 500+ companies worldwide.</p>
-          <div class="stats row text-center">
-            <div class="col-md-4 stat">
+
+          <!-- Stats Section -->
+          <div class="row text-center mt-4 g-4">
+            <div class="col-lg-4 col-md-6 col-12 stat">
               <h3 class="count" data-target="500">0</h3>
               <p>Happy Clients</p>
             </div>
-            <div class="col-md-4 stat">
+            <div class="col-lg-4 col-md-6 col-12 stat">
               <h3 class="count" data-target="150">0</h3>
               <p>Team Members</p>
             </div>
-            <div class="col-md-4 stat">
+            <div class="col-lg-4 col-md-6 col-12 stat">
               <h3 class="count" data-target="1000">0</h3>
               <p>Projects Completed</p>
             </div>
@@ -102,6 +111,7 @@
       </div>
     </div>
   </section>
+
 
   <!-- Contact Section -->
   <section id="contact" class="contact">
@@ -115,7 +125,7 @@
             <div class="info-icon"><i class="fa-solid fa-location-dot"></i></div>
             <div>
               <h3>Address</h3>
-              <p>123 Tech Street, Silicon Valley, CA 94025</p>
+              <p>123 Tech Street, Silicon Valley, California</p>
             </div>
           </div>
           <div class="info-item">
@@ -137,19 +147,19 @@
         <form class="contact-form mt-2" id="contactForm">
           <div class="form-group">
             <label for="name">Name</label>
-            <input type="text" id="name" name="name" placeholder="Your Name" required>
+            <input type="text" id="name" name="name" placeholder="Your Name" >
             <span class="error-message" id="nameError"></span>
           </div>
 
           <div class="form-group">
             <label for="email">Email</label>
-            <input type="email" id="email" name="email" placeholder="Your Email" required>
+            <input type="email" id="email" name="email" placeholder="Your Email" >
             <span class="error-message" id="emailError"></span>
           </div>
 
           <div class="form-group">
             <label for="message">Message</label>
-            <textarea id="message" name="message" placeholder="Your Message" rows="5" required></textarea>
+            <textarea id="message" name="message" placeholder="Your Message" rows="5" ></textarea>
             <span class="error-message" id="messageError"></span>
           </div>
 
