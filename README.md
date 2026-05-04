@@ -47,5 +47,3 @@ Code
    git clone https://github.com/rakibhosain2302/TechVision
 
 
-📜 License
-This project is licensed under the MIT License.
