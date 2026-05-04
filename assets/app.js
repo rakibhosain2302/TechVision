@@ -171,11 +171,11 @@ function validateName() {
   const name = nameInput.value.trim();
 
   if (name === "") {
-    nameError.textContent = "❌ Name is required";
+    nameError.textContent = "Name is required";
     nameError.classList.add("show");
     return false;
   } else if (name.length < 3) {
-    nameError.textContent = "❌ Name must be at least 3 characters";
+    nameError.textContent = "Name must be at least 3 characters";
     nameError.classList.add("show");
     return false;
   } else {
@@ -189,11 +189,11 @@ function validateEmail() {
   const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 
   if (email === "") {
-    emailError.textContent = "❌ Email is required";
+    emailError.textContent = "Email is required";
     emailError.classList.add("show");
     return false;
   } else if (!emailRegex.test(email)) {
-    emailError.textContent = "❌ Please enter a valid email address";
+    emailError.textContent = "Please enter a valid email address";
     emailError.classList.add("show");
     return false;
   } else {
@@ -206,11 +206,11 @@ function validateMessage() {
   const message = messageInput.value.trim();
 
   if (message === "") {
-    messageError.textContent = "❌ Message is required";
+    messageError.textContent = "Message is required";
     messageError.classList.add("show");
     return false;
   } else if (message.length < 10) {
-    messageError.textContent = "❌ Message must be at least 10 characters";
+    messageError.textContent = "Message must be at least 10 characters";
     messageError.classList.add("show");
     return false;
   } else {
