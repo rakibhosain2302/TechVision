@@ -104,6 +104,39 @@ servicesData.forEach((service) => {
   servicesGrid.appendChild(col);
 });
 
+function animateCountUp(element, duration = 2000) {
+  const target = +element.getAttribute("data-target");
+  let start = 0;
+  const increment = target / (duration / 16); // ~60fps
+
+  function update() {
+    start += increment;
+    if (start < target) {
+      element.textContent = Math.floor(start) + "+";
+      requestAnimationFrame(update);
+    } else {
+      element.textContent = target + "+";
+    }
+  }
+  update();
+}
+
+// Trigger when stats section is visible
+const counters = document.querySelectorAll(".count");
+const observer = new IntersectionObserver(
+  (entries) => {
+    entries.forEach((entry) => {
+      if (entry.isIntersecting) {
+        animateCountUp(entry.target);
+        observer.unobserve(entry.target); // run once
+      }
+    });
+  },
+  { threshold: 0.5 },
+);
+
+counters.forEach((counter) => observer.observe(counter));
+
 // ============================================
 // SMOOTH SCROLL
 // ============================================
@@ -249,7 +282,7 @@ const observerOptions = {
   rootMargin: "0px 0px -50px 0px",
 };
 
-const observer = new IntersectionObserver((entries) => {
+const scrollObserver = new IntersectionObserver((entries) => {
   entries.forEach((entry) => {
     if (entry.isIntersecting) {
       entry.target.style.opacity = "1";
@@ -263,7 +296,7 @@ document.querySelectorAll(".service-card").forEach((card) => {
   card.style.opacity = "0";
   card.style.transform = "translateY(20px)";
   card.style.transition = "opacity 0.6s ease, transform 0.6s ease";
-  observer.observe(card);
+  scrollObserver.observe(card);
 });
 
 // ============================================
