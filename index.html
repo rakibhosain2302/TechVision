@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>TechVision - IT Solutions for Your Business</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="assets/style.css">
+</head>
+
+<body>
+  <!-- Navigation Bar -->
+  <nav class="navbar">
+    <div class="container">
+      <div class="logo">TechVision</div>
+      <button class="hamburger" id="hamburger">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+      <ul class="nav-menu" id="navMenu">
+        <li><a href="#home" class="nav-link">Home</a></li>
+        <li><a href="#services" class="nav-link">Services</a></li>
+        <li><a href="#about" class="nav-link">About</a></li>
+        <li><a href="#contact" class="nav-link">Contact</a></li>
+      </ul>
+      <button class="theme-toggle" id="themeToggle" title="Toggle Dark Mode">🌙</button>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <section id="home" class="hero">
+    <div class="container">
+      <div class="hero-content d-grid">
+        <div class="hero-text">
+          <h1 class="hero-title">Welcome to TechVision</h1>
+          <p class="hero-subtitle">Innovative IT Solutions for Modern Businesses</p>
+          <p class="hero-description">
+            Empower your business with innovative technology and expert-driven solutions.
+            We specialize in creating scalable, user-friendly, and high-performance digital experiences
+            that help you stay ahead in a competitive market. Whether it's web development,
+            custom software, or digital transformation, we turn your ideas into powerful solutions.
+          </p> <a href="#contact" class="btn btn-primary">Get Started</a>
+        </div>
+        <div class="hero-image">
+          <div class="hero-placeholder">
+            <img class="hero-image" src="assets/images/hero3.png" alt="">
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Services Section -->
+  <section id="services" class="services py-5">
+    <div class="container text-center">
+      <h2 class="section-title">Our Services</h2>
+      <p class="section-subtitle">Comprehensive IT solutions tailored to your needs</p>
+
+      <div id="servicesGrid" class="row g-4">
+        <!-- Service cards will be injected here by JS -->
+      </div>
+    </div>
+  </section>
+
+
+  <!-- About Section -->
+  <section id="about" class="about">
+    <div class="container">
+      <div class="about-grid">
+        <div class="about-image">
+          <div class="about-placeholder">🚀</div>
+        </div>
+        <div class="about-content">
+          <h2>About TechVision</h2>
+          <p>Founded in 2015, TechVision has been at the forefront of digital transformation, helping businesses of all
+            sizes leverage technology to achieve their goals.</p>
+          <p>With a team of 150+ experienced professionals, we specialize in delivering comprehensive IT solutions that
+            drive innovation and sustainable growth. Our commitment to excellence and customer satisfaction has made us
+            a trusted partner for over 500+ companies worldwide.</p>
+          <div class="stats">
+            <div class="stat">
+              <h3>500+</h3>
+              <p>Happy Clients</p>
+            </div>
+            <div class="stat">
+              <h3>150+</h3>
+              <p>Team Members</p>
+            </div>
+            <div class="stat">
+              <h3>1000+</h3>
+              <p>Projects Completed</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section id="contact" class="contact">
+    <div class="container">
+      <h2 class="section-title">Get In Touch</h2>
+      <p class="section-subtitle">We'd love to hear from you. Send us a message!</p>
+
+      <div class="contact-grid">
+        <div class="contact-info">
+          <div class="info-item">
+            <div class="info-icon">📍</div>
+            <div>
+              <h3>Address</h3>
+              <p>123 Tech Street, Silicon Valley, CA 94025</p>
+            </div>
+          </div>
+          <div class="info-item">
+            <div class="info-icon">📞</div>
+            <div>
+              <h3>Phone</h3>
+              <p>+1 (555) 123-4567</p>
+            </div>
+          </div>
+          <div class="info-item">
+            <div class="info-icon">✉️</div>
+            <div>
+              <h3>Email</h3>
+              <p>hello@techvision.com</p>
+            </div>
+          </div>
+        </div>
+
+        <form class="contact-form" id="contactForm">
+          <div class="form-group">
+            <label for="name">Name</label>
+            <input type="text" id="name" name="name" placeholder="Your Name" required>
+            <span class="error-message" id="nameError"></span>
+          </div>
+
+          <div class="form-group">
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" placeholder="Your Email" required>
+            <span class="error-message" id="emailError"></span>
+          </div>
+
+          <div class="form-group">
+            <label for="message">Message</label>
+            <textarea id="message" name="message" placeholder="Your Message" rows="5" required></textarea>
+            <span class="error-message" id="messageError"></span>
+          </div>
+
+          <button type="submit" class="btn btn-primary">Send Message</button>
+          <span class="success-message" id="successMessage"></span>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <p>&copy; 2026 TechVision. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script src="assets/app.js"></script>
+</body>
+
+</html>
