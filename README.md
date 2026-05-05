@@ -37,11 +37,12 @@ assets/
 │   ├── hero.png
 │   ├── about.png
 │   └── services/ (service images)
-├── css/
-│   └── style.css
-└── js/
-└── script.js
+│ 
+└── style.css
+└── Appp.js
+
 index.html
+
 README.md
 
 Code
