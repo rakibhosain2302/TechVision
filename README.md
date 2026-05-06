@@ -34,11 +34,17 @@ The website includes key sections such as **Hero, Services, About, and Contact**
 ## 📂 Project Structure
 assets/
 ├── images/
+
 │   ├── hero.png
+
 │   ├── about.png
+
 │   └── services/ (service images)
+
 │ 
+
 └── style.css
+
 └── Appp.js
 
 index.html
